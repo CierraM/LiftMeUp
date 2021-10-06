@@ -1,11 +1,17 @@
 //This file is for connecting the index.html page with data
+//Do not use this file to fetch data. Fetch data with the classes imported from the models.
 import {
     clearElement,
     createCardHtml,
     createMemeHtml,
     insertHtml
 }
-from "../helpers/helpers.js"
+    from "../helpers/helpers.js"
+
+import Scriptures from "../models/scriptures-model.js"
+import Quotes from "../models/quotes-model.js"
+import Memes from "../models/memes-model.js"
+    
 
 /**
  * This is the main function
