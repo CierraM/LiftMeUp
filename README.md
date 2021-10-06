@@ -1,1 +1,3 @@
 # LiftMeUp
+
+## Code Organization:
