@@ -1,0 +1,79 @@
+/* https://coolors.co/fdc921-fdd85d-fffdf7-99d6ea-6798c0 */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+nav {
+    height: 100%;
+    display: grid;
+    align-items: center;
+    background-color: #99D6EA;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0;
+    padding: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
+}
+
+nav ul li a:hover,
+nav ul li a:active,
+nav ul li a.active {
+    background-color: #4c73ad4d;
+}
+
+main {
+    padding: 1rem;
+}
+
+.card {
+    border-radius: 10px;
+    border: 2px solid #fdda68;
+    background-color: #fde5967a;
+    box-shadow: 5px 5px 5px rgba(61, 54, 61, 0.226);
+    padding: 1rem;
+    max-width: 30rem;
+    margin: 2rem auto;
+}
+
+.card img {
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    max-width: 15rem;
+}
+
+.card h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 0;
+}
+
+.card .citation {
+    font-style: italic;
+}
+
+button {
+    background-color: #99D6EA;
+    padding: .2rem .5rem;
+    border-radius: 5px;
+    border: 1px solid #7abfd6;
+}
+
+button:hover {
+    background-color: #7abfd6;
+}
