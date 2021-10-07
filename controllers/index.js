@@ -21,7 +21,7 @@ import Memes from "../models/memes-model.js"
  * 
  */
 function main() {
-
+    document.getElementById('fetchQuote').addEventListener('click', loadQuote);
 }
 
 /**
@@ -36,10 +36,27 @@ function main() {
  * 
  */
 function loadQuote() {
+    let category = document.getElementById('categorySelect').value;
 
+    if (category === 'quote') {
+        let quote = Quotes.getRandomQuote();
+        let cardHtml = createCardHtml(quote);
+        clearElement('output');
+        insertHtml('output', cardHtml)
+        
+    } else if (category === 'meme') {
+        let meme = Memes.getRandomMeme();
+        let cardHtml = createMemeHtml(meme);
+        clearElement('output');
+        insertHtml('output', cardHtml)
+
+    } else { //scripture
+        let scripture = Scriptures.getRandomScripture();
+        let cardHtml = createCardHtml(scripture);
+        clearElement('output');
+        insertHtml('output', cardHtml)
+    }
 }
 
 
 main()
-
-export {}

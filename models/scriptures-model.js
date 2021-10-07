@@ -11,6 +11,12 @@ class Scriptures {
     constructor() {
         
     }
+   static getRandomScripture() {
+        return {
+            reference: "1 Nephi 3:7",
+            text: "I will go and do..."
+        }
+    }
 }
 
 export default Scriptures;

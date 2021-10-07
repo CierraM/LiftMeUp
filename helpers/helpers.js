@@ -8,7 +8,7 @@
  * @param {string} nodeId
  */
  function clearElement(nodeId) {
-
+     document.getElementById(nodeId).innerHTML = "";
  }
 
  /**
@@ -28,7 +28,7 @@
  * @returns {string}
  */
 function createCardHtml(data) {
-
+    return "<div>This is a card</div>"
 }
 
 /**
@@ -44,7 +44,7 @@ function createCardHtml(data) {
  * @return {string}
  */
  function createMemeHtml(data) {
-
+    return "<div>This is a meme</div>"
  }
 
  /**
@@ -57,7 +57,7 @@ function createCardHtml(data) {
  * @param {string} html
  */
 function insertHtml(parentNodeId, html) {
-
+    document.getElementById(parentNodeId).innerHTML = html;
 }
 
 export {clearElement, createCardHtml, createMemeHtml, insertHtml}

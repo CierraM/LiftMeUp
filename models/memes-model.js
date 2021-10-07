@@ -12,6 +12,9 @@
     constructor() {
         
     }
+    static getRandomMeme() {
+         
+    }
 }
 
 export default Memes;

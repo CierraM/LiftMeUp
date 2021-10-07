@@ -12,6 +12,9 @@
     constructor() {
         
     }
+     static getRandomQuote() {
+         
+     }
 }
 
 export default Quotes;
