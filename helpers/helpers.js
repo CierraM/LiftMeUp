@@ -7,19 +7,19 @@
  * 
  * @param {string} nodeId
  */
- function clearElement(nodeId) {
-     document.getElementById(nodeId).innerHTML = "";
- }
+function clearElement(nodeId) {
+    document.getElementById(nodeId).innerHTML = "";
+}
 
- /**
+/**
  * This is a function for rendering text in the card format to match the card snippet
  * 
  * Take data from js object in this form: 
  * (we might change this depending on data format we get from the api)
  * {
  * title: value,
+ * text: value,
  * cite: value,
- * link: value
  * }
  * Make it match the card snippet format in snippets/snippets.html
  * return the html snippet
@@ -28,7 +28,12 @@
  * @returns {string}
  */
 function createCardHtml(data) {
-    return "<div>This is a card</div>"
+    return `
+    <div class="card" id="output">
+        <h3>${data.title}</h3>
+        <p>${data.text}</p>
+        <p class="citation">${data.cite}</p>
+    </div>`
 }
 
 /**
@@ -43,11 +48,14 @@ function createCardHtml(data) {
  * @param {object} data
  * @return {string}
  */
- function createMemeHtml(data) {
-    return "<div>This is a meme</div>"
- }
+function createMemeHtml(data) {
+    return `
+    <div class="card img">
+        <img src="${data.href}">
+    </div>`
+}
 
- /**
+/**
  * This is a function for inserting html into the document
  * 
  * Takes the id of a parent node and an html string as arguments
@@ -60,4 +68,9 @@ function insertHtml(parentNodeId, html) {
     document.getElementById(parentNodeId).innerHTML = html;
 }
 
-export {clearElement, createCardHtml, createMemeHtml, insertHtml}
+export {
+    clearElement,
+    createCardHtml,
+    createMemeHtml,
+    insertHtml
+}
