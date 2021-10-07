@@ -45,16 +45,20 @@ function loadQuote() {
         insertHtml('output', cardHtml)
         
     } else if (category === 'meme') {
-        let meme = Memes.getRandomMeme();
-        let cardHtml = createMemeHtml(meme);
-        clearElement('output');
-        insertHtml('output', cardHtml)
+        Memes.getRandomMeme((meme => {
+            let cardHtml = createMemeHtml(meme);
+            clearElement('output');
+            insertHtml('output', cardHtml)
+        }));
+        
 
     } else { //scripture
-        let scripture = Scriptures.getRandomScripture();
-        let cardHtml = createCardHtml(scripture);
+        Scriptures.getRandomScripture().then(scripture => {
+            let cardHtml = createCardHtml(scripture).then();
         clearElement('output');
         insertHtml('output', cardHtml)
+        });
+        
     }
 }
 

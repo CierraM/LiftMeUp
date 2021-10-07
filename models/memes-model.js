@@ -9,12 +9,22 @@
  * Please document any methods you add.
  */
  class Memes {
+     static url = "https://reddit-reflector.herokuapp.com/programmerhumor";
     constructor() {
-        
     }
-    static getRandomMeme() {
-         
+    static getRandomMeme(cb) {
+        fetch(this.url)
+            .then(response => response.json())
+            .then(data => {
+                let index = Math.floor(Math.random() * data.data.children.length);
+                let url = data.data.children[index].data.url
+                
+                cb({
+                    href: url
+                }) 
+         })
     }
 }
+
 
 export default Memes;
