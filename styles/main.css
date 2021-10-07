@@ -3,6 +3,11 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
+    width: 100vw;
+}
+
+html {
+    width: 100%;
 }
 
 nav {
@@ -10,6 +15,8 @@ nav {
     display: grid;
     align-items: center;
     background-color: #99D6EA;
+    width: 100%;
+    font-size: 1.2rem;
 }
 
 nav ul {
@@ -20,14 +27,14 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0;
-    padding: 1rem;
+    margin: 1rem;
 }
 
 nav ul li a {
     text-decoration: none;
     color: black;
     padding: 1rem;
+    width: 100%;
 }
 
 nav ul li a:hover,
@@ -39,6 +46,7 @@ nav ul li a.active {
 main {
     margin: 0 auto;
     max-width: 60rem;
+    padding: 0 1rem;
 }
 
 section h1 {
@@ -74,12 +82,41 @@ section h1 {
 
 button {
     background-color: #99D6EA;
-    padding: .2rem .5rem;
-    border-radius: 5px;
+    padding: .25rem 2rem;
+    border-radius: 1px;
     border: 1px solid #7abfd6;
+    font-size: 1rem;
+    /* display: block; */
+    margin: 1rem 0;
+    margin-left: 1rem;
 }
 
 button:hover {
     background-color: #7abfd6;
     cursor: pointer;
+}
+
+select {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0 .2rem;
+    border: 2px solid #7abfd6;
+    border-radius: 1px;
+}
+
+@media only screen and (max-width: 515px) {
+
+    section h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        display: block;
+        text-align: center;
+    }
+
+
+    button {
+        display: block;
+        margin: 1rem 0;
+    }
 }
