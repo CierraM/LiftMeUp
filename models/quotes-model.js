@@ -25,7 +25,18 @@
     //Gets a list of quotes
     //cb: a callback that is executed when the data has finished fetching
     static getQuoteList(cb) {
-        
+       let endList = [];
+       fetch(this.manyQuotesUrl).then(response => response.json()).then(response => {
+          response.forEach(quote => {
+             
+             endList.push({
+                title: "",
+                text: quote.q,
+                cite: quote.a
+              })
+           })
+           cb(endList)
+       })
    }
 }
 
