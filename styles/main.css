@@ -32,6 +32,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
+    align-items: center;
 }
 
 nav ul li {
@@ -49,13 +50,22 @@ nav ul li a:hover,
 nav ul li a:active,
 nav ul li a.active {
     background-color: #4c73ad4d;
-}
+} 
 
 .logo{
     padding: 1rem;
     font-weight: bold;
     font-size: 1.4em;
-    
+    max-width: 100px;   
+}
+
+a.logo:hover,
+a.logo:active {
+    background-color: unset;
+}
+
+.logo img {
+    max-width: 100px;
 }
 
 main {
@@ -176,14 +186,14 @@ select:hover {
     /* transform-origin: 100% 50%; */
     opacity: .75;
     display: inline-block;
-    transition: transform 1s ease-in-out;
+    transition: transform 1s ease-in-out, opacity 1s;
 }
 
 .home-heading.loaded .me {
     transform: scale(3);
     opacity: .25;
     display: inline-block;
-    transition: transform 1s ease-in-out 1s;
+    transition: transform 1s ease-in-out 1s, opacity 1s ease-in-out 1s;
 }
 
 .home-heading.loaded .up {
