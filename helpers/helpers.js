@@ -31,7 +31,7 @@ function createCardHtml(data) {
     return `
     <div class="card" id="output">
         <h3>${data.title}</h3>
-        <p>${data.text}</p>
+        <q class="quote">${data.text}</q>
         <p class="citation">${data.cite}</p>
     </div>`
 }

@@ -33,6 +33,7 @@ function main() {
 //gets random scriptures, scriptureGetLimit at a time
 function loadAll() {  
     let list = Scriptures.getScriptureList()
+    clearElement('feed')
     if (list.length > scriptureGetLimit) {
         for (let i = 0; i < scriptureGetLimit; i ++){
                 let cardHtml = createCardHtml(list[i]);

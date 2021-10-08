@@ -25,6 +25,7 @@ import Quotes from "../models/quotes-model.js"
  */
  function main() {
      Quotes.getQuoteList(quotes => {
+        clearElement('feed')
          quotes.forEach(quote => {
              let cardHtml = createCardHtml(quote);
              insertHtml('feed', cardHtml)

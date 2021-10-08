@@ -27,6 +27,7 @@ import Memes from "../models/memes-model.js"
  function main() {
 
      Memes.getMemesUrl(memes => {
+         clearElement('feed')
          memes.forEach(meme => {
              
              let cardHtml = createMemeHtml(meme);

@@ -7,14 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main.css">
-    <title>Lift Me Up</title>
+    <title>LiftMeUp | Home</title>
 </head>
 
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="logo">LiftMeUp</a></li>
                 <li><a href="views/scriptures.html">Scriptures</a></li>
                 <li><a href="views/quotes.html">Quotes</a></li>
                 <li><a href="views/memes.html">Memes</a></li>
@@ -24,18 +24,27 @@
     <main>
         <section id="intro">
             <!-- TODO: Put Page intro here -->
-            <h1>Welcome to Lift Me Up</h1>
-            <p>This is the place to come to when you need a little "Lift Me Up." Here you can generate random uplifting messages or peruse our subpages which contain collections of uplifting messages.<p>   
+            <h1 class="home-heading"><span class="welcome">Welcome</span> <span class="to">to</span> <span class="liftMeUp">
+
+                <span class="lift">Lift</span>
+                <span class="me">Me</span>
+                <span class="up">Up</span>
+                </span>
+            </h1>
+            <p>This is the place to come to when you need a little "Lift Me Up." Here you can generate random uplifting quotes, scriptures, or memes. Or you can click on the links above to browse.
+            <p>
         </section>
         <section>
-            <span>Generate a random ...
-                <select name="" id="categorySelect">
-                    <option value="scripture">scripture</option>
-                    <option value="quote">quote</option>
-                    <option value="meme">meme</option>
-                </select>
-            </span>
-            <button class="button" id="fetchQuote">Go</button>
+            <div class="form">
+                <span>Generate a random ...
+                    <select name="" id="categorySelect">
+                        <option value="scripture">scripture</option>
+                        <option value="quote">quote</option>
+                        <option value="meme">meme</option>
+                    </select>
+                </span>
+                <button class="button" id="fetchQuote">Go</button>
+            </div>
             <!-- For outputting the random quote -->
             <div id="output">
 
