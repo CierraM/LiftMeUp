@@ -24,13 +24,14 @@ import Quotes from "../models/quotes-model.js"
  * 
  */
  function main() {
-    clearElement('output');
-    for (i = 0; i < 20; i ++) {
-        let quote = Quotes.getRandomQuote(quote => {
-            let cardHtml = createCardHtml(quote);
-            insertHtml('output', cardHtml)
+     Quotes.getQuoteList(quotes => {
+         quotes.forEach(quote => {
+             let cardHtml = createCardHtml(quote);
+             insertHtml('feed', cardHtml)
+                
+            })
         });
-    }
+
  }
 
  main()
