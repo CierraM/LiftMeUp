@@ -8,6 +8,7 @@ import {
 }
 from "../helpers/helpers.js"
 
+import Quotes from "../models/quotes-model.js"
 /**
  * This is the main function
  * 
@@ -23,7 +24,13 @@ from "../helpers/helpers.js"
  * 
  */
  function main() {
-
+    clearElement('output');
+    for (i = 0; i < 20; i ++) {
+        let quote = Quotes.getRandomQuote(quote => {
+            let cardHtml = createCardHtml(quote);
+            insertHtml('output', cardHtml)
+        });
+    }
  }
 
  main()

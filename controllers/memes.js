@@ -8,6 +8,7 @@ import {
     insertHtml
 }
 from "../helpers/helpers.js"
+import Memes from "../models/memes-model.js"
 
 /**
  * This is the main function
@@ -24,7 +25,14 @@ from "../helpers/helpers.js"
  * 
  */
  function main() {
+    clearElement('output');
+    for (i = 0; i < 5; i ++){
+        Memes.getRandomMeme((meme => {
+            let cardHtml = createMemeHtml(meme);
+            insertHtml('output', cardHtml)
+        }));
 
+    }
  }
 
  main()

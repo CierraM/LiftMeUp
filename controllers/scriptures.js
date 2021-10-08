@@ -7,7 +7,7 @@ import {
     insertHtml
 }
 from "../helpers/helpers.js"
-
+import Scriptures from "../models/scriptures-model.js"
 /**
  * This is the main function
  * 
@@ -23,7 +23,13 @@ from "../helpers/helpers.js"
  * 
  */
  function main() {
-
+    clearElement('output');
+    for (i = 0; i < 20; i ++){
+    Scriptures.getRandomScripture(scripture => {
+        let cardHtml = createCardHtml(scripture);
+        insertHtml('output', cardHtml)
+    });
+  }
  }
 
 main()
