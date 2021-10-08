@@ -57,7 +57,9 @@ nav ul li a.active {
     font-weight: bold;
     font-size: 1.4em;
     max-width: 100px;   
+    
 }
+
 
 a.logo:hover,
 a.logo:active {
@@ -66,6 +68,8 @@ a.logo:active {
 
 .logo img {
     max-width: 100px;
+    background-color:white;
+    border-radius: 100%;
 }
 
 main {
