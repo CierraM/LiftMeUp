@@ -8,10 +8,13 @@
  * and format it the way you need to work with it.
  * Please document any methods you add.
  */
- class Memes {
-     static url = "https://reddit-reflector.herokuapp.com/programmerhumor";
+class Memes {
+    static subreddit = "programmerhumor";
+     static url = `https://reddit-reflector.herokuapp.com/${this.subreddit}`;
     constructor() {
     }
+    //gets a single random meme
+    //cb: a callback that is executed when the data has finished fetching
     static getRandomMeme(cb) {
         fetch(this.url)
             .then(response => response.json())
@@ -23,6 +26,20 @@
                     href: url
                 }) 
          })
+    }
+    //Gets a list of meme links
+    //cb: a callback that is executed when the data has finished fetching
+    static getMemesUrl(cb) {
+        fetch(this.url)
+            .then(response => response.json())
+            .then(data => {
+                let urls = [];
+                data.data.children.forEach((child, index) => {
+                    urls.push(child.data.url)
+                    
+                })
+                cb(urls)
+            })
     }
 }
 
