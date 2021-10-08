@@ -24,7 +24,7 @@ class Scriptures {
         }
         cb(scripture)
     }
-    //Gets a list of meme links
+    //Gets a list of scriptures
     //cb: a callback that is executed when the data has finished fetching
     static getScriptureList(cb) {
         
