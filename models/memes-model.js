@@ -31,11 +31,18 @@ class Memes {
     //cb: a callback that is executed when the data has finished fetching
     static getMemesUrl(cb) {
         fetch(this.url)
-            .then(response => response.json())
+            .then(response => {
+                if (response.ok) {
+                    return response.json()
+                }
+                else {
+                    console.log('error')
+                }
+            })
             .then(data => {
                 let urls = [];
                 data.data.children.forEach((child, index) => {
-                    urls.push(child.data.url)
+                    urls.push({ href: child.data.url })
                     
                 })
                 cb(urls)

@@ -25,14 +25,17 @@ import Memes from "../models/memes-model.js"
  * 
  */
  function main() {
-    clearElement('output');
-    for (i = 0; i < 5; i ++){
-        Memes.getRandomMeme((meme => {
-            let cardHtml = createMemeHtml(meme);
-            insertHtml('output', cardHtml)
-        }));
 
-    }
+     Memes.getMemesUrl(memes => {
+         memes.forEach(meme => {
+             
+             let cardHtml = createMemeHtml(meme);
+                 insertHtml('feed', cardHtml)
+         })
+     })
+   
+
+
  }
 
  main()

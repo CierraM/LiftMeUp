@@ -51,10 +51,10 @@ function createCardHtml(data) {
 function createMemeHtml(data) {
     return `
     <div class="card img">
-        <img src="${data.href}">
+        <img src="${data.href}" alt="meme image">
     </div>`
+    
 }
-
 /**
  * This is a function for inserting html into the document
  * 
