@@ -22,6 +22,7 @@ import Memes from "../models/memes-model.js"
  */
 function main() {
     document.getElementById('fetchQuote').addEventListener('click', loadQuote);
+    document.querySelector('.home-heading').classList.add('loaded')
 }
 
 /**

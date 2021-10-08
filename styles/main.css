@@ -9,7 +9,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between
+    justify-content: space-between;
+    color: rgb(19, 19, 19);
 }
 
 html {
@@ -167,26 +168,30 @@ select:hover {
     
 }
 
- .home-heading:hover .liftMeUp .lift{
+.home-heading {
+    margin-top: 60px;
+}
+.home-heading.loaded .lift {
+    transform: translateY(-25px) rotate(-45deg);
+    /* transform-origin: 100% 50%; */
+    opacity: .75;
     display: inline-block;
-    transform: translateY(-20px);
-    transition: transform, 2s, ease-in-out;
-    
+    transition: transform 1s ease-in-out;
 }
 
-.home-heading:hover .liftMeUp .me{
+.home-heading.loaded .me {
+    transform: scale(3);
+    opacity: .25;
     display: inline-block;
-    transform: translateY(-40px);
-    transition: transform, 2s, ease-in-out;
-    
+    transition: transform 1s ease-in-out 1s;
 }
 
-.home-heading:hover .liftMeUp .up{
+.home-heading.loaded .up {
+    transform: translateY(-40px) scale(1.2);
     display: inline-block;
-    transform: translateY(-60px);
-    transition: transform, 2s, ease-in-out;
-    
+    transition: transform 1s ease-in-out 2s;
 }
+
 
 .lift {
     color: #587a85;
@@ -198,7 +203,7 @@ select:hover {
 }
 
 .up {
-    color: #99D6EA;
+    color: #facc35;
 }
 
 @media only screen and (max-width: 515px) {
