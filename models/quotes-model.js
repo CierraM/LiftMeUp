@@ -9,12 +9,24 @@
  * Please document any methods you add.
  */
  class Quotes {
-    constructor() {
-        
-    }
-     static getRandomQuote() {
-         
+    constructor() {}
+    static singleQuoteUrl = "https://reddit-reflector.herokuapp.com/zenquotes/random"
+    static manyQuotesUrl = "https://reddit-reflector.herokuapp.com/zenquotes/quotes"
+     static getRandomQuote(cb) {
+        fetch(this.singleQuoteUrl).then(response => response.json()).then(response => {
+            let quote = {
+               title: "",
+               text: response[0].q,
+               cite:response[0].a
+            }
+           cb(quote);
+         })
      }
+    //Gets a list of quotes
+    //cb: a callback that is executed when the data has finished fetching
+    static getQuoteList(cb) {
+        
+   }
 }
 
 export default Quotes;
