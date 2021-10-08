@@ -221,6 +221,12 @@ select:hover {
     color: #facc35;
 }
 
+footer {
+    margin-top: 30px;
+    background-color: #3c6775;
+    color: rgb(230, 230, 230);
+}
+
 @media only screen and (max-width: 515px) {
 
     section h1 {
