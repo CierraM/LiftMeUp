@@ -67,9 +67,10 @@ a.logo:active {
 }
 
 .logo img {
-    max-width: 100px;
+    max-width: 1.2em;
     background-color:white;
     border-radius: 100%;
+    transform: scale(1.8);
 }
 
 main {
