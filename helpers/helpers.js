@@ -65,7 +65,7 @@ function createMemeHtml(data) {
  * @param {string} html
  */
 function insertHtml(parentNodeId, html) {
-    document.getElementById(parentNodeId).innerHTML = html;
+    document.getElementById(parentNodeId).innerHTML += html;
 }
 
 export {
