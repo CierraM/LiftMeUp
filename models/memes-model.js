@@ -10,7 +10,7 @@
  */
 class Memes {
     static subreddit = "programmerhumor";
-     static url = `https://reddit-reflector.herokuapp.com/reddit${this.subreddit}`;
+     static url = `https://reddit-reflector.herokuapp.com/reddit/${this.subreddit}`;
     constructor() {
     }
     //gets a single random meme
