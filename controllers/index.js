@@ -6,12 +6,12 @@ import {
     createMemeHtml,
     insertHtml
 }
-    from "../helpers/helpers.js"
+from "../helpers/helpers.js"
 
 import Scriptures from "../models/scriptures-model.js"
 import Quotes from "../models/quotes-model.js"
 import Memes from "../models/memes-model.js"
-    
+
 
 /**
  * This is the main function
@@ -39,26 +39,28 @@ function loadQuote() {
     let category = document.getElementById('categorySelect').value;
 
     if (category === 'quote') {
-        let quote = Quotes.getRandomQuote();
-        let cardHtml = createCardHtml(quote);
-        clearElement('output');
-        insertHtml('output', cardHtml)
-        
+        let quote = Quotes.getRandomQuote(quote => {
+            let cardHtml = createCardHtml(quote);
+            clearElement('output');
+            insertHtml('output', cardHtml)
+        });
+
+
     } else if (category === 'meme') {
         Memes.getRandomMeme((meme => {
             let cardHtml = createMemeHtml(meme);
             clearElement('output');
             insertHtml('output', cardHtml)
         }));
-        
+
 
     } else { //scripture
-        Scriptures.getRandomScripture().then(scripture => {
-            let cardHtml = createCardHtml(scripture).then();
-        clearElement('output');
-        insertHtml('output', cardHtml)
+        Scriptures.getRandomScripture(scripture => {
+            let cardHtml = createCardHtml(scripture);
+            clearElement('output');
+            insertHtml('output', cardHtml)
         });
-        
+
     }
 }
 
