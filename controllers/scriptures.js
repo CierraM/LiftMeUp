@@ -22,15 +22,34 @@ import Scriptures from "../models/scriptures-model.js"
  * to call the next page of data
  * 
  */
- function main() {
-    clearElement('output');
-    for (i = 0; i < 20; i ++){
-    Scriptures.getRandomScripture(scripture => {
-        let cardHtml = createCardHtml(scripture);
-        insertHtml('output', cardHtml)
-    });
-  }
- }
+const scriptureGetLimit = 100;
+
+function main() {
+    
+    loadAll();
+    
+}
+
+//gets random scriptures, scriptureGetLimit at a time
+function loadAll() {  
+    let list = Scriptures.getScriptureList()
+    if (list.length > scriptureGetLimit) {
+        for (let i = 0; i < scriptureGetLimit; i ++){
+                let cardHtml = createCardHtml(list[i]);
+                insertHtml('feed', cardHtml)
+            
+        }
+    } else {
+        list.forEach(item => {
+            let cardHtml = createCardHtml(item);
+            insertHtml('feed', cardHtml)
+        })
+    }
+
+}
+
+
+
 
 main()
  

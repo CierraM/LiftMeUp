@@ -27,7 +27,13 @@ class Scriptures {
     //Gets a list of scriptures
     //cb: a callback that is executed when the data has finished fetching
     static getScriptureList(cb) {
-        
+        return data.map(scripture => {
+            return {
+                title: '',
+                text: scripture.scripture_text,
+                cite: scripture.verse_title
+            }
+        })
     }
 }
 
