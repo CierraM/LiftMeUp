@@ -130,6 +130,8 @@ q.quote::before, q.quote::after {
     font-size: 1.5rem;
     font-family: "Oswald", serif;
     color: rgb(148, 71, 38);
+    position: relative;
+    top: 5px;
 /*     padding: 5px; */
 }
 
