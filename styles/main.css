@@ -131,8 +131,8 @@ q.quote::before, q.quote::after {
     font-family: "Oswald", serif;
     color: rgb(148, 71, 38);
     position: relative;
-    top: 5px;
-/*     padding: 5px; */
+    top: 7px;
+    padding: 0px;
 }
 
 
