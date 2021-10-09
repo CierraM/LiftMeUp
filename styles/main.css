@@ -56,7 +56,7 @@ nav ul li:first-child:hover {
 
 nav ul li:hover,
 nav ul li:active,
-nav ul li a.active {
+nav ul li.active {
     background-color: #4c73ad4d;
     height: 100%;
 } 
@@ -232,6 +232,10 @@ select:hover {
 
 footer img.logo {
     padding: 0;
+    max-width: unset;
+    width: 150px;
+    height:150px;
+   
 }
 
 footer {
@@ -240,17 +244,24 @@ footer {
     background-color: #3c6775;
     color: rgb(230, 230, 230);
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    
 }
 
 footer div {
     align-self: center;
-    padding: 0 2rem;
+    padding: .5rem 2rem;
 }
 
 footer div {
     font-size: .8rem;
+}
+
+footer div p {
+    margin: 2px;
+}
+
+footer a{
+    color:rgb(143, 198, 205)
 }
 
 @media only screen and (max-width: 515px) {
@@ -258,6 +269,15 @@ footer div {
     footer img.logo {
         width: 100px;
         height: 100px;
+        margin: 0 auto;
+    }
+
+    footer div:nth-of-type(1){
+        padding-top: 0;
+    }
+
+    footer{
+        flex-direction: column;
     }
 
     footer div {
@@ -304,5 +324,15 @@ footer div {
     button {
         display: block;
         margin: 1rem 0;
+    }
+
+    .liftMeUp {
+        display: block;
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+
+    .home-heading {
+        text-align: center;
     }
 }
