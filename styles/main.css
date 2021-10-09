@@ -230,6 +230,10 @@ select:hover {
     color: #facc35;
 }
 
+#output {
+    min-height: 350px;
+}
+
 footer img.logo {
     padding: 0;
     max-width: unset;
