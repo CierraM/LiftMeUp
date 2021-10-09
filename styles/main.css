@@ -132,8 +132,8 @@ q.quote::before, q.quote::after {
     color: rgb(148, 71, 38);
     position: relative;
     top: 7px;
-    padding: -5px;
-    margin: -5px;
+    padding-top: -5px;
+    margin-top: -5px;
 }
 
 
