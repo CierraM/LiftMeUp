@@ -9,7 +9,7 @@
  * Please document any methods you add.
  */
 class Memes {
-    static subreddit = "programmerhumor";
+    static subreddit = "wholesomememes";
      static url = `https://reddit-reflector.herokuapp.com/reddit/${this.subreddit}`;
     constructor() {
     }
