@@ -276,7 +276,14 @@ footer a{
         margin: 0 auto;
     }
 
-    footer div:nth-of-type(1){
+    footer {
+        display: block;
+    }
+
+
+    
+    
+    /* footer div:nth-of-type(1){
         padding-top: 0;
     }
 
@@ -287,7 +294,7 @@ footer a{
     footer div {
         font-size: .8rem;
         padding: 1rem 0;
-    }
+    } */
 
     select {
         margin-top: 1rem;
